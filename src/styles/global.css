@@ -1,0 +1,124 @@
+:root {
+  --body-txt: #343a40;
+  --items-dark: #495057;
+  --items-light: #6c757d;
+  --items-lighter: #adb5bd;
+  --validation-error: #e56b6f;
+  --validation-warn: #ffb600;
+  --validation-success: #6a994e;
+}
+
+body {
+  color: var(--body-txt);
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.content-wrapper {
+  max-width: 360px;
+  padding: 2rem 6rem;
+  margin: 2rem auto;
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px var(--items-lighter);
+}
+
+.counter {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.info {
+  font-size: 0.8rem;
+  color: #e85d04;
+}
+
+.counter input,
+.timeout {
+  border: 1px solid var(--body-txt);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-weight: bold;
+  height: 43px;
+  outline: 0;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.display-time {
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid var(--body-txt);
+  display: flex;
+  flex-direction: column-reverse;
+  height: 300px;
+  width: 100%;
+}
+
+.time-elapsed {
+  background-color: lightskyblue;
+  border-radius: 4px 4px 0 0;
+  /* transition: height 0.3s linear; */
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  padding: 0.3rem 0;
+}
+
+.controls button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var(--body-txt);
+  font-size: 1.5rem;
+  line-height: 1;
+  outline: 0;
+  /* transition: background 400ms; */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  color: var(--body-txt);
+  padding: 0.5rem;
+}
+
+button:disabled,
+button:disabled:hover {
+  cursor: not-allowed;
+  color: grey;
+  background-color: lightgrey;
+  border-color: lightgrey;
+}
+
+button:hover {
+  color: white;
+  background: var(--body-txt)
+    radial-gradient(circle, transparent 1%, var(--body-txt) 1%) center/15000%;
+}
+
+.play,
+.pause {
+  width: 70%;
+}
+
+.stop {
+  width: 30%;
+}
+
+.validation-message {
+  color: var(--validation-success);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: .5rem;
+  display: block;
+}
+
+.validation-message.warning {
+  color: var(--validation-warn);
+}
